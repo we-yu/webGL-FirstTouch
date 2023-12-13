@@ -1,0 +1,11 @@
+version: '3'
+services:
+  webgl_sample:
+    build: .
+    container_name: webgl_tutorial
+    ports:
+      - "18181:8080"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm start
